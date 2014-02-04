@@ -1,0 +1,42 @@
+body {
+	font-family: sans-serif;
+}
+
+input {
+	padding: 5px;
+	width: 500px;
+}
+
+.diff {
+	border-spacing: 0;
+}
+
+.diff td {
+	margin: 0;
+	padding: 2px;
+	border-bottom: 1px solid white;
+}
+
+.diff td.key {
+	padding-right: 20px;
+	font-style: italic;
+}
+
+.diff .depth1 td.key { padding-left: 10px; }
+.diff .depth2 td.key { padding-left: 20px; }
+.diff .depth3 td.key { padding-left: 30px; }
+.diff .depth4 td.key { padding-left: 40px; }
+.diff .depth5 td.key { padding-left: 50px; }
+
+.diff .added {
+	background-color: #afa;
+}
+
+.diff .removed {
+	background-color: #faa;
+}
+
+.diff .changed {
+	background-color: #ffa;
+}
+

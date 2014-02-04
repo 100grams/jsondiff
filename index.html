@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>JSON-diff</title>
+<link rel="stylesheet" href="css/jsondiff.css">
+<body ng-app="jsondiff" ng-controller="DiffCtrl">
+
+<p>
+	<input ng-model="jsonA" placeholder="{ foo: 1 }"><br>
+	<input ng-model="jsonB" placeholder="{ foo: 2 }">
+</p>
+
+<table class="diff">
+	<tr ng-repeat="line in diffLines"
+	    class="{{ line.diffType }} depth{{ line.depth }}">
+	    <td class="key">{{ line.key }}</td>
+		<td class="val">{{ line.valueA }}</td>
+		<td class="val">{{ line.valueB }}</td>
+	</tr>
+</table>
+
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/underscore-min.js"></script>
+<script src="js/jsondiff.js"></script>
